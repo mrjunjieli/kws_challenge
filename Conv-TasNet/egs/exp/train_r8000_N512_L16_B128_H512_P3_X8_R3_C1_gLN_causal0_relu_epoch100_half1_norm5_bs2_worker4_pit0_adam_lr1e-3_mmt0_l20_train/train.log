@@ -1,0 +1,9 @@
+Loading checkpoint model exp/train_r8000_N512_L16_B128_H512_P3_X8_R3_C1_gLN_causal0_relu_epoch100_half1_norm5_bs2_worker4_pit0_adam_lr1e-3_mmt0_l20_train/final.pth.tar
+Training...
+Epoch 29 | Iter 1 | Average Loss -11.835 | Current Loss -11.834711 | 3320.5 ms/batch
+Epoch 29 | Iter 11 | Average Loss -10.520 | Current Loss -11.891239 | 565.1 ms/batch
+Epoch 29 | Iter 21 | Average Loss -12.339 | Current Loss -16.417290 | 427.6 ms/batch
+Epoch 29 | Iter 31 | Average Loss -12.098 | Current Loss -14.128958 | 379.7 ms/batch
+Epoch 29 | Iter 41 | Average Loss -12.474 | Current Loss -17.574020 | 374.0 ms/batch
+Epoch 29 | Iter 51 | Average Loss -12.101 | Current Loss -7.267349 | 356.0 ms/batch
+Epoch 29 | Iter 61 | Average Loss -12.028 | Current Loss -10.211390 | 345.7 ms/batch

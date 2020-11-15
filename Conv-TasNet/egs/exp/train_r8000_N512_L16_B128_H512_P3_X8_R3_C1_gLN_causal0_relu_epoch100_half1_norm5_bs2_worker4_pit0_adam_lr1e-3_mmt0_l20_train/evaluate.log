@@ -1,0 +1,22 @@
+# evaluate.py --model_path exp/train_r8000_N512_L16_B128_H512_P3_X8_R3_C1_gLN_causal0_relu_epoch100_half1_norm5_bs2_worker4_pit0_adam_lr1e-3_mmt0_l20_train/final.pth.tar --data_dir data/test --cal_sdr 1 --use_cuda 1 --sample_rate 8000 --batch_size 2 
+# Started at Mon Nov  2 16:05:59 CST 2020
+#
+/Work18/2020/lijunjie/kws_challenge/106/Conv-TasNet-Modify/src/utils.py:40: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than tensor.new_tensor(sourceTensor).
+  frame = signal.new_tensor(frame).long()  # signal may in GPU or CPU
+mixture torch.Size([2, 11040])
+source torch.Size([2, 1, 11040])
+estimate_source torch.Size([2, 1, 11040])
+Traceback (most recent call last):
+  File "/Work18/2020/lijunjie/kws_challenge/106/Conv-TasNet-Modify/egs/wsj0/../../src/evaluate.py", line 148, in <module>
+    evaluate(args)
+  File "/Work18/2020/lijunjie/kws_challenge/106/Conv-TasNet-Modify/egs/wsj0/../../src/evaluate.py", line 76, in evaluate
+    avg_SDRi = cal_SDRi(src_ref, src_est, mix)
+  File "/Work18/2020/lijunjie/kws_challenge/106/Conv-TasNet-Modify/egs/wsj0/../../src/evaluate.py", line 101, in cal_SDRi
+    sdr0, sir0, sar0, popt0 = bss_eval_sources(src_ref, src_anchor)
+  File "/Work18/2020/lijunjie/anaconda3/envs/torch1.1/lib/python3.7/site-packages/mir_eval/separation.py", line 194, in bss_eval_sources
+    validate(reference_sources, estimated_sources)
+  File "/Work18/2020/lijunjie/anaconda3/envs/torch1.1/lib/python3.7/site-packages/mir_eval/separation.py", line 80, in validate
+    estimated_sources.shape))
+ValueError: The shape of estimated sources and the true sources should match.  reference_sources.shape = (1, 11040), estimated_sources.shape = (2, 11040)
+# Accounting: time=21 threads=1
+# Ended (code 1) at Mon Nov  2 16:06:20 CST 2020, elapsed time 21 seconds
